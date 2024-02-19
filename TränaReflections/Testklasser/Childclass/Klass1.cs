@@ -33,7 +33,7 @@ namespace TränaReflections.Testklasser.Childclass
                 if (_property2 != value)
                 {
                     _property2 = value;
-                    OnPropertyChanged(nameof(_property2));
+                    OnPropertyChanged(nameof(property2));
                 }
             }
         }

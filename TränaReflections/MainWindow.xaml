@@ -8,11 +8,22 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
-            
+            <ItemsControl ItemsSource="{Binding lista}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock>
+                            <Run Text="{Binding Namn}"></Run>
+                            <Run Text="{Binding property1, UpdateSourceTrigger=PropertyChanged}"></Run>
+                            <Run Text="{Binding property2, UpdateSourceTrigger=PropertyChanged}"></Run>
+                            <Run Text="{Binding property3, UpdateSourceTrigger=PropertyChanged}"></Run>
+                        </TextBlock>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
         </StackPanel>
-        <StackPanel Width="100" Height="200" Margin="613,104,87,130">
-            <Button Height="30" Content="Lägg till klass"/>
-            <Button Height="30" Content="property1"></Button>
+        <StackPanel Width="100" Height="200" Margin="562,105,138,129">
+            <Button Height="30" Content="Lägg till klass" Click="Button_Click"/>
+            <Button Height="30" Content="property1" Click="Button_Click_1"></Button>
         </StackPanel>
     </Grid>
 </Window>
